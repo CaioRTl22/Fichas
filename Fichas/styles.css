@@ -1,0 +1,236 @@
+/* Definições gerais para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1b1b1b;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Centralizando os títulos */
+h1, h2 {
+  text-align: center;
+}
+
+div{
+  border-radius: 5px;
+}
+/* Espaçamento inferior para os grupos de formulário */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Definindo estilo para rótulos de campos */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilo para campos de entrada de texto e número */
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 16px); /* Define a largura dos campos de entrada */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+/* Estilo para botão de envio */
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Estilo de foco para o botão de envio */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para grupos de atributos e estatísticas de combate */
+.attributes,
+.combat-stats {
+  background-color: #333;
+  padding: 15px;
+  margin-top: 20px;
+  max-width: 400px; /* Definindo a largura máxima para as divs */
+}
+
+/* Estilo para títulos dentro dos grupos */
+.attributes h2,
+.combat-stats h2 {
+  margin-top: 0;
+}
+
+/* Estilo para grupos de campos de entrada */
+.attributes-group,
+.combat-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 10px; /* Ajustando margem inferior */
+  border-radius: 5px;
+  
+}
+
+/* Estilo para rótulos dentro dos grupos */
+.attributes-group label,
+.combat-group label {
+  margin-bottom: 0;
+}
+
+/* Estilo para campos de entrada dentro dos grupos */
+.attributes-group input,
+.combat-group input {
+  width: 80px; /* Reduzindo o tamanho dos campos de atributos e estatísticas de batalha */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+/* Estilo para div de perícias */
+.skills {
+  background-color: #333;
+  padding: 15px;
+  margin-top: 20px;
+  max-width: 200px;
+  max-height: 600px; /* Definindo a largura máxima para a div de perícias */
+  margin-left: 250px; /* Alinhamento à direita */
+  border-radius: 5px;
+}
+
+/* Estilo para título dentro da div de perícias */
+.skills h2 {
+  margin-top: 0;
+  text-align: right; /* Alinhamento à direita */
+}
+
+/* Estilo para grupos de checkboxes de perícias */
+.skills .skill-checkboxes {
+  text-align: right; /* Alinhamento à direita */
+}
+
+/* Estilo para rótulos das checkboxes */
+.skills .skill-checkboxes label {
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para os inputs das checkboxes */
+.skills .skill-checkboxes input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Estilo para o estilo visual das checkboxes */
+.skills .skill-checkboxes .checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: #444;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Estilo para o indicador de marcação das checkboxes */
+.skills .skill-checkboxes .checkbox-custom::after {
+  content: '\2713';
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+/* Estilo para as checkboxes marcadas */
+.skills .skill-checkboxes input[type="checkbox"]:checked + .checkbox-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Estilo para as checkboxes visíveis */
+.skills .skill-checkboxes input[type="checkbox"] {
+  opacity: 1;
+  position: static;
+  margin: 0;
+  visibility: visible;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+
+/**/
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  border-radius: 5px;
+}
+
+.basic-stats {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.attributes {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.combat-stats {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.skills {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+}
+
+
+.skills {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    /* Alinha os elementos à esquerda horizontalmente */
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.skill-checkboxes {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha as checkboxes à esquerda horizontalmente */
+}
+
+.skill-checkboxes label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.skill-checkboxes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.skill-checkboxes label {
+  align-items: flex-start; /* Alinha as labels à esquerda */
+}

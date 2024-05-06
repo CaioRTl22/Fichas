@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Formulário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="" method="post">
+    <div class="container">
+        <div class="basic-stats">
+            <h2>Estatísticas Básicas</h2>
+            <div class="basic-stats-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div class="basic-stats-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade">
+            </div>
+            <div class="basic-stats-group">
+                <label for="nivel">Nível:</label>
+                <input type="number" id="nivel" name="nivel">
+            </div>
+            <div class="basic-stats-group">
+                <label for="afinidade">Afinidade:</label>
+                <input type="text" id="afinidade" name="afinidade">
+            </div>
+            <div class="basic-stats-group">
+                <label for="classe">Classe:</label>
+                <input type="text" id="classe" name="classe">
+            </div>
+            <div class="basic-stats-group">
+                <label for="trilha">Trilha:</label>
+                <input type="text" id="trilha" name="trilha">
+            </div>
+            <div class="basic-stats-group">
+                <label for="vida">Vida:</label>
+                <input type="number" id="vida" name="vida">
+            </div>
+            <div class="basic-stats-group">
+                <label for="sanidade">Sanidade:</label>
+                <input type="number" id="sanidade" name="sanidade">
+            </div>
+            <div class="basic-stats-group">
+                <label for="PP">Pontos de Poder (PP):</label>
+                <input type="number" id="PP" name="PP">
+            </div>
+        </div>
+
+        <div class="attributes">
+            <h2>Atributos</h2>
+            <div class="attributes-group">
+                <label for="forca">Força:</label>
+                <input type="number" id="forca" name="forca">
+            </div>
+            <div class="attributes-group">
+                <label for="destreza">Destreza:</label>
+                <input type="number" id="destreza" name="destreza">
+            </div>
+            <div class="attributes-group">
+                <label for="constituicao">Constituição:</label>
+                <input type="number" id="constituicao" name="constituicao">
+            </div>
+            <div class="attributes-group">
+                <label for="sabedoria">Sabedoria:</label>
+                <input type="number" id="sabedoria" name="sabedoria">
+            </div>
+            <div class="attributes-group">
+                <label for="inteligencia">Inteligência:</label>
+                <input type="number" id="inteligencia" name="inteligencia">
+            </div>
+            <div class="attributes-group">
+                <label for="carisma">Carisma:</label>
+                <input type="number" id="carisma" name="carisma">
+            </div>
+            <div class="attributes-group">
+                <label for="poder">Poder:</label>
+                <input type="number" id="poder" name="poder">
+            </div>
+        </div>
+
+        <div class="combat-stats">
+            <h2>Estatísticas de Combate</h2>
+            <div class="combat-group">
+                <label for="armadura-passiva">Armadura Passiva:</label>
+                <input type="number" id="armadura-passiva" name="armadura-passiva">
+            </div>
+            <div class="combat-group">
+                <label for="bloqueio">Bloqueio:</label>
+                <input type="number" id="bloqueio" name="bloqueio">
+            </div>
+            <div class="combat-group">
+                <label for="esquiva">Esquiva:</label>
+                <input type="number" id="esquiva" name="esquiva">
+            </div>
+            <div class="combat-group">
+                <label for="reducao-fisica">Redução Física:</label>
+                <input type="number" id="reducao-fisica" name="reducao-fisica">
+            </div>
+            <div class="combat-group">
+                <label for="reducao-paranormal">Redução Paranormal:</label>
+                <input type="number" id="reducao-paranormal" name="reducao-paranormal">
+            </div>
+            <div class="combat-group">
+                <label for="reducao-mental">Redução Mental:</label>
+                <input type="number" id="reducao-mental" name="reducao-mental">
+            </div>
+            <div class="combat-group">
+                <label for="movimento">Movimento:</label>
+                <input type="number" id="movimento" name="movimento">
+            </div>
+        </div>
+
+        <div class="skills">
+            <h2>Perícias</h2>
+            <div class="skill-checkboxes">
+                <label><input type="checkbox" name="acrobacia">Acrobacia</label>
+                <label><input type="checkbox" name="atletismo">Atletismo</label>
+                <label><input type="checkbox" name="atualizades">Atualizações</label>
+                <label><input type="checkbox" name="ciencias">Ciências</label>
+                <label><input type="checkbox" name="charme">Charme</label>
+                <label><input type="checkbox" name="diplomacia">Diplomacia</label>
+                <label><input type="checkbox" name="enganação">Enganação</label>
+                <label><input type="checkbox" name="fortitude">Fortitude</label>
+                <label><input type="checkbox" name="furtividade">Furtividade</label>
+                <label><input type="checkbox" name="iniciativa">Iniciativa</label>
+                <label><input type="checkbox" name="investigação">Investigação</label>
+                <label><input type="checkbox" name="luta">Luta</label>
+                <label><input type="checkbox" name="ocultismo">Ocultismo</label>
+                <label><input type="checkbox" name="percepção">Percepção</label>
+                <label><input type="checkbox" name="pilotagem">Pilotagem</label>
+                <label><input type="checkbox" name="pontaria">Pontaria</label>
+                <label><input type="checkbox" name="psicologia">Psicologia</label>
+                <label><input type="checkbox" name="reflexos">Reflexos</label>
+                <label><input type="checkbox" name="tecnologia">Tecnologia</label>
+                <label><input type="checkbox" name="vontade">Vontade</label>
+            </div>
+            <div class="skill-bonus">
+                <label for="bonus-pericia">Bônus de Perícia:</label>
+                <input type="number" id="bonus-pericia" name="bonus-pericia">
+            </div>
+        </div>
+    </div>
+    <br>
+    <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
