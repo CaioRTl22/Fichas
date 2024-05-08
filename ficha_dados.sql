@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_ficha
 -- ------------------------------------------------------
@@ -48,23 +48,23 @@ CREATE TABLE `tb_ficha` (
   `red_paranormal_ficha` int DEFAULT NULL,
   `red_mental_ficha` int DEFAULT NULL,
   `movimento_ficha` int DEFAULT NULL,
-  `acrobacia_ficha` tinytext,
-  `atletismo_ficha` tinyint DEFAULT NULL,
-  `atualizacoes_ficha` tinyint DEFAULT NULL,
-  `ciencias_ficha` tinyint DEFAULT NULL,
-  `enganacao_ficha` tinyint DEFAULT NULL,
-  `fortitude_ficha` tinyint DEFAULT NULL,
-  `furtividade_ficha` tinyint DEFAULT NULL,
-  `iniciativa_ficha` tinyint DEFAULT NULL,
-  `luta_ficha` tinyint DEFAULT NULL,
-  `ocultismo_ficha` tinyint DEFAULT NULL,
-  `percepcao_ficha` tinyint DEFAULT NULL,
-  `pilotagem_ficha` tinyint DEFAULT NULL,
-  `pontaria_ficha` tinyint DEFAULT NULL,
-  `psicologia_ficha` tinyint DEFAULT NULL,
-  `reflexos_ficha` tinyint DEFAULT NULL,
-  `tecnologia_ficha` tinyint DEFAULT NULL,
-  `vontade_ficha` tinyint DEFAULT NULL,
+  `acrobacia_ficha` tinyint DEFAULT '0',
+  `atletismo_ficha` tinyint DEFAULT '0',
+  `atualizacoes_ficha` tinyint DEFAULT '0',
+  `ciencias_ficha` tinyint DEFAULT '0',
+  `enganacao_ficha` tinyint DEFAULT '0',
+  `fortitude_ficha` tinyint DEFAULT '0',
+  `furtividade_ficha` tinyint DEFAULT '0',
+  `iniciativa_ficha` tinyint DEFAULT '0',
+  `luta_ficha` tinyint DEFAULT '0',
+  `ocultismo_ficha` tinyint DEFAULT '0',
+  `percepcao_ficha` tinyint DEFAULT '0',
+  `pilotagem_ficha` tinyint DEFAULT '0',
+  `pontaria_ficha` tinyint DEFAULT '0',
+  `psicologia_ficha` tinyint DEFAULT '0',
+  `reflexos_ficha` tinyint DEFAULT '0',
+  `tecnologia_ficha` tinyint DEFAULT '0',
+  `vontade_ficha` tinyint DEFAULT '0',
   `bonus_pericia_ficha` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_ficha`),
   KEY `fk_tb_ficha_tb_usuario_idx` (`tb_usuario_usuario_email`),
@@ -116,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-08  0:21:52
+-- Dump completed on 2024-05-08 12:47:32
