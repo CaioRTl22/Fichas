@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $_SESSION['email'] = $email;
     //Ve se ele foi caregado com um submit
     if(isset($_POST['submit'])){
 
@@ -25,23 +26,45 @@
         $poder = $_POST['poder'];
 
         $armPassiva = $_POST['armadura-passiva'];
-        $ = $_POST[''];
-        $ = $_POST[''];
-        $ = $_POST[''];
-        $ = $_POST[''];
-        $ = $_POST[''];
-        $ = $_POST[''];
+        $bloqueio = $_POST['bloqueio'];
+        $esquiva = $_POST['esquiva'];
+        $redFisica = $_POST['redFisica'];
+        $redParanormal = $_POST['redParanormal'];
+        $redMental = $_POST['redMental'];
+        $movimento = $_POST['movimento'];
 
+        $acrobacia = $_POST['acrobacia'];
+        $atletismo = $_POST['atletismo'];
+        $atualidades = $_POST['atualidades'];
+        $ciencias = $_POST['ciencias'];
+        $charme = $_POST['charme'];
+        $diplomacia = $_POST['diplomacia'];
+        $enganacao = $_POST['enganacao'];
+        $fortitude = $_POST['fortitude'];
+        $furtividade = $_POST['furtividade'];
+        $iniciativa = $_POST['iniciativa'];
+        $investigacao = $_POST['investigacao'];
+        $luta = $_POST['luta'];
+        $ocultismo = $_POST['ocultismo'];
+        $percepcao = $_POST['percepcao'];
+        $pilotagem = $_POST['pilotagem'];
+        $pontaria = $_POST['pontaria'];
+        $psicologia = $_POST['psicologia'];
+        $reflexos = $_POST['reflexos'];
+        $tecnologia = $_POST['tecnologia'];
+        $vontade = $_POST['vontade'];
+        
+        $sql_insert =  "INSERT INTO tb_ficha(
+            nome_ficha ,idade_ficha ,nivel_ficha,
+            afinidade_ficha, classe_ficha, trilha_ficha,
+            vida_ficha, sanidade_ficha, pp_ficha) 
+        VALUES (
+            '$nome','$idade','$nivel',
+            '$afinidade','$classe','$trilha',
+            '$vida','$sanidade','$pp')";
 
+        $result = mysqli_query($conexao, $sql_insert);
 
-            //Criptação da senha
-        $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
-            //Execusão do banco de dados de inserção
-        $result = mysqli_query($conexao, "INSERT INTO tb_usuario(usuario_nome ,usuario_email ,usuario_senha) VALUES ('$nome','$email','$senha_cripto')");
-
-        $_SESSION['email'] = $email;
-
-        header('Location: logado.html');
         
     }
 
