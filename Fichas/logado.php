@@ -2,6 +2,9 @@
 
         include_once('config.php');
 
+    verificaUsuario();
+            
+
     session_start();
     $email = $_SESSION['email'];
 
@@ -14,7 +17,7 @@
    $usuario = $resultado->fetch_assoc();
 
 
-   $sql_ficha = "SELECT nome_ficha FROM tb_ficha WHERE tb_usuario_usuario_email = '$email' " ;
+   $sql_ficha = "SELECT * FROM tb_ficha WHERE tb_usuario_usuario_email = '$email' " ;
 
    $resultado_fichas = $conexao->query($sql_ficha) or die($conexao->error);
 
@@ -28,6 +31,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script src="./codigo.js"></script>
 </head>
 <body>
     <p>Olá! <?php echo $usuario['usuario_nome']; ?></p> 
@@ -36,7 +41,9 @@
 
     <?php
         while($ficha = $resultado_fichas->fetch_assoc()){
-            echo $ficha['nome_ficha']. "<br>"; 
+            $id = $ficha['id_ficha'];
+            echo $ficha['nome_ficha']. "<a href='#' onclick='visFicha($id)'> Visualizar </a> ". "<br>" ;
+          
         }
     ?>
 

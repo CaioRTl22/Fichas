@@ -24,7 +24,7 @@
 
         //FUNÇÃO PARA VERIFICAR SE O USUARIO ESTA OU NÃO EM UMA SESSION
     function verificaUsuario(){
-        if((!isset($_SESSION['email']) == true) && (!isset($_SESSION['email']) == true)){
+        if((!isset($_SESSION['email']) == false)){
             expulsaUsuario();
         }
     }

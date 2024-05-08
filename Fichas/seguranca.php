@@ -25,7 +25,7 @@ session_start();
             header ('Location: logado.php');
         }
         else{
-            expulsaUsuario();
+           // expulsaUsuario();
         }
     }
     else{
