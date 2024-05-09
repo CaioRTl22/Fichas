@@ -31,11 +31,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="./script.js"></script>
+    <script src="./scriptt.js"></script>
 </head>
 <body>
     <h1>Olá! <?php echo $usuario['usuario_nome']; ?></h1> 
 
+    <a href="cri_ficha.php">Crie uma ficha!</a>
     <p>Aqui abaixo estao suas fichas:</p>
 
     <span id="msgErro"></span> <br>
@@ -43,7 +44,7 @@
     <?php
         while($ficha = $resultado_fichas->fetch_assoc()){
             $id = $ficha['id_ficha'];
-            echo $ficha['nome_ficha']."<a href='#' onclick='visFicha($id)'> Visualizar </a> "."<br>" ;
+            echo $ficha['nome_ficha']." "."<a href='#' onclick='visFicha($id)'>Visualizar </a> "."<br>" ;
           
         }
     ?>
@@ -54,26 +55,50 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="visUsuarioModalLabel">Visualizar Usuário</h5>
+                    <h5 class="modal-title" id="visUsuarioModalLabel">Visualizar Ficha</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <span id="msgAlertaErroVis"></span>
-                    <dl class="row">
-                        <dt class="col-sm-3">ID</dt>
-                        <dd class="col-sm-9"><span id="idFicha"></span></dd>
-                        
+                    <dl class="row">            
                         <dt class="col-sm-3">Nome</dt>
-                        <dd class="col-sm-9"><span id="nomeUsuario"></span></dd>
+                        <dd class="col-sm-9"><span id="nomeFicha"></span></dd>
+
+                        <dt class="col-sm-3">Idade</dt>
+                        <dd class="col-sm-9"><span id="idadeFicha"></span></dd>
                         
-                        <dt class="col-sm-3">E-mail</dt>
-                        <dd class="col-sm-9"><span id="emailUsuario"></span></dd>
+                        <dt class="col-sm-3">Nivel</dt>
+                        <dd class="col-sm-9"><span id="nivelFicha"></span></dd>
                         
-                        <dt class="col-sm-3">Logradouro</dt>
-                        <dd class="col-sm-9"><span id="logradouroUsuario"></span></dd>
+                        <dt class="col-sm-3">Afinidade</dt>
+                        <dd class="col-sm-9"><span id="afinidadeFicha"></span></dd> 
                         
-                        <dt class="col-sm-3">Número</dt>
-                        <dd class="col-sm-9"><span id="numeroUsuario"></span></dd>
+                        <dt class="col-sm-3">Classe</dt>
+                        <dd class="col-sm-9"><span id="classeFicha"></span></dd> 
+
+                        <dt class="col-sm-3">Trilha</dt>
+                        <dd class="col-sm-9"><span id="trilhaFicha"></span></dd> <hr>
+
+                        <!-- VAMOS LÁ -->
+
+                        <dt class="col-sm-3">Vida</dt>
+                        <dd class="col-sm-9"><span id="vidaFicha"></span></dd>
+                        
+                        <dt class="col-sm-3">Sanidade</dt>
+                        <dd class="col-sm-9"><span id="sanidadeFicha"></span></dd>
+
+                        <dt class="col-sm-3">PP</dt>
+                        <dd class="col-sm-9"><span id="ppFicha"></span></dd>
+                        
+                        <dt class="col-sm-3">Nivel</dt>
+                        <dd class="col-sm-9"><span id="nivelFicha"></span></dd>
+                        
+                        <dt class="col-sm-3">Afinidade</dt>
+                        <dd class="col-sm-9"><span id="afinidadeFicha"></span></dd> 
+                        
+                        <dt class="col-sm-3">Classe</dt>
+                        <dd class="col-sm-9"><span id="classeFicha"></span></dd> <hr>
+
 
                     </dl>
                 </div>
